@@ -34,7 +34,7 @@
 .hero-carousel .carousel-item img {
   display: block;
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   object-fit: cover;         /* corta lateral/vertical quando precisar */
   object-position: top center; /* foco no topo */
 }
@@ -188,19 +188,19 @@
     </button>
   </div>
 
-  <main class="container py-5">
+  <main class="container">
 
     <!-- CONTROLES -->
-    <section class="mb-4 d-flex flex-wrap align-items-center gap-2">
-      <div class="btn-group" role="group" aria-label="Categorias">
-        <button class="btn btn-outline-secondary active" data-filter="all">Tudo</button>
-        <button class="btn btn-outline-secondary" data-filter="rochas">Rochas</button>
-        <button class="btn btn-outline-secondary" data-filter="sondas">Sondas</button>
-        <button class="btn btn-outline-secondary" data-filter="posteres">Pôsteres</button>
-        <button class="btn btn-outline-secondary" data-filter="souvenires">Souvenires</button>
-      </div>
-      <input id="search" type="search" class="form-control ms-auto w-auto" placeholder="Buscar item...">
-    </section>
+<section class="mb-4 d-flex flex-wrap justify-content-center align-items-center gap-2 mt-0">
+  <div class="btn-group" role="group" aria-label="Categorias">
+    <button class="btn btn-outline-secondary active" data-filter="all">Tudo</button>
+    <button class="btn btn-outline-secondary" data-filter="rochas">Rochas</button>
+    <button class="btn btn-outline-secondary" data-filter="sondas">Sondas</button>
+    <button class="btn btn-outline-secondary" data-filter="posteres">Pôsteres</button>
+    <!-- <button class="btn btn-outline-secondary" data-filter="souvenires">Souvenires</button> -->
+  </div>
+</section>
+
 
     <!-- PRODUTOS -->
     <section id="produtos" class="row g-4">
