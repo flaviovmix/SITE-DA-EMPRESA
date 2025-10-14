@@ -19,7 +19,7 @@
 
     .hero-carousel img {
       object-fit: cover;
-      height: 80vh;
+      height: 70vh;
     }
 
     .parallax {
@@ -85,6 +85,27 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12); /* realce no hover */
   transform: translateY(-4px); /* leve elevação */
 }
+
+@media (max-width: 767.98px) {
+  .footer .row {
+    flex-direction: column !important; /* força as colunas a empilhar */
+    align-items: center;
+    text-align: center; /* centraliza texto e links */
+  }
+  .footer .col-6,
+  .footer .col-12,
+  .footer .col-md-3 {
+    width: 100% !important; /* cada coluna ocupa toda a largura */
+    max-width: 480px; /* largura máxima opcional */
+  }
+  .footer ul {
+    padding-left: 0;
+  }
+  .footer h5, .footer h6 {
+    margin-top: 1rem;
+  }
+}
+
 
   </style>
 </head>
