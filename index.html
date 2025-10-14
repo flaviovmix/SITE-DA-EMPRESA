@@ -17,16 +17,35 @@
       background: #f6f9ff;
     }
 
-    .hero-carousel img {
-      object-fit: cover;
-      height: 80vh;
-    }
+/* Altura do carrossel (desktop) */
+.hero-carousel {
+  height: 80svh; /* usa viewport “seguro” em mobile moderno; cai pra vh se não suportar */
+  height: 80vh;
+  overflow: hidden;
+}
 
-    @media (max-width: 767.98px) {
-      .hero-carousel img {
-        height: 40vh;
-      }
-    }
+/* Faz todos os níveis internos herdarem a altura */
+.hero-carousel .carousel-inner,
+.hero-carousel .carousel-item {
+  height: 100%;
+}
+
+/* A imagem preenche e corta o excesso */
+.hero-carousel .carousel-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;         /* corta lateral/vertical quando precisar */
+  object-position: top center; /* foco no topo */
+}
+
+/* Ajuste específico para celular */
+@media (max-width: 767.98px) {
+  .hero-carousel {
+    height: 60svh; /* ~60% da tela no mobile */
+    height: 60vh;
+  }
+}
 
     .parallax {
       background-attachment: fixed;
