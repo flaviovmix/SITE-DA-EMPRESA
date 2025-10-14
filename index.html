@@ -64,6 +64,28 @@
   object-fit: cover;         /* corta o excesso */
   object-position: top center; /* centraliza o corte no topo */
 }
+
+.footer a:hover {
+  color: #ffffff !important;
+  text-decoration: underline;
+}
+
+.footer {
+  background: #0d1117; /* cor espacial escura */
+}
+.product-card {
+  border: 1px solid rgba(255, 255, 255, 0.6); /* borda clara translúcida */
+  border-radius: 1rem; /* cantos mais suaves */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* sombra suave e elegante */
+  background: #ffffff; /* garante contraste com o fundo */
+  transition: all 0.3s ease;
+}
+
+.product-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12); /* realce no hover */
+  transform: translateY(-4px); /* leve elevação */
+}
+
   </style>
 </head>
 
@@ -120,76 +142,85 @@
     <!-- PRODUTOS -->
     <section id="produtos" class="row g-4">
 
-      <div class="col-12 col-sm-6 col-lg-4">
-        <div class="product-card h-100 p-3" data-cat="rochas">
-          <div class="ratio ratio-16x9 rounded-3 border mb-3 bg-white overflow-hidden">
-            <img src="./img/img1.png" alt="Rocha Lunar">
-          </div>
-          <h5 class="fw-semibold mb-1">Rocha Lunar — Série Estudo</h5>
-          <p class="text-secondary small mb-2">Réplica científica com ficha de densidade e origem.</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <span class="price text-primary fs-5">R$ 189,90</span>
-            <button class="btn btn-primary btn-sm">Adicionar</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-lg-4">
-        <div class="product-card h-100 p-3" data-cat="rochas">
-          <div class="ratio ratio-16x9 rounded-3 border mb-3 bg-white overflow-hidden">
-            <img src="./img/img2.png" alt="Meteorito Marciano">
-          </div>
-          <h5 class="fw-semibold mb-1">Meteorito Marciano (réplica)</h5>
-          <p class="text-secondary small mb-2">Textura porosa e etiqueta de catalogação.</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <span class="price text-primary fs-5">R$ 249,90</span>
-            <button class="btn btn-primary btn-sm">Adicionar</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-lg-4">
-        <div class="product-card h-100 p-3" data-cat="sondas">
-          <div class="ratio ratio-16x9 rounded-3 border mb-3 bg-white overflow-hidden">
-            <img src="./img/img3.png" alt="Mini Sonda Voyager">
-          </div>
-          <h5 class="fw-semibold mb-1">Mini Sonda Voyager</h5>
-          <p class="text-secondary small mb-2">Miniatura detalhada com datas de lançamento.</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <span class="price text-primary fs-5">R$ 149,00</span>
-            <button class="btn btn-primary btn-sm">Adicionar</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-lg-4">
-        <div class="product-card h-100 p-3" data-cat="posteres">
-          <div class="ratio ratio-16x9 rounded-3 border mb-3 bg-white overflow-hidden">
-            <img src="./img/img4.png" alt="Pôster Mapas Estelares">
-          </div>
-          <h5 class="fw-semibold mb-1">Pôster Mapas Estelares (A2)</h5>
-          <p class="text-secondary small mb-2">Constelações e escalas de distância.</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <span class="price text-primary fs-5">R$ 79,90</span>
-            <button class="btn btn-primary btn-sm">Adicionar</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-lg-4">
-        <div class="product-card h-100 p-3" data-cat="souvenires">
-          <div class="ratio ratio-16x9 rounded-3 border mb-3 bg-white overflow-hidden">
-            <img src="./img/img5.png" alt="Chaveiro Planeta Anelado" class="img-fluid"
+    <div class="col-12 col-sm-6 col-lg-4">
+      <div class="product-card h-100 p-3" data-cat="rochas">
+        <!-- AQUI: trocado ratio-16x9 → ratio-4x3 -->
+        <div class="ratio ratio-4x3 rounded-3 border mb-3 bg-white overflow-hidden">
+          <img src="./img/img1.png" alt="Rocha Lunar"
+              class="img-fluid"
               style="width:100%; height:100%; object-fit:cover; object-position:top center;">
-          </div>
-          <h5 class="fw-semibold mb-1">Chaveiro Planeta Anelado</h5>
-          <p class="text-secondary small mb-2">Acrílico translúcido com brilho suave.</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <span class="price text-primary fs-5">R$ 29,90</span>
-            <button class="btn btn-primary btn-sm">Adicionar</button>
-          </div>
+        </div>
+
+        <h5 class="fw-semibold mb-1">Rocha Lunar — Série Estudo</h5>
+        <p class="text-secondary small mb-2">
+          Réplica científica com ficha de densidade e origem.
+        </p>
+        <div class="d-flex justify-content-between align-items-center">
+          <span class="price text-primary fs-5">R$ 189,90</span>
+          <button class="btn btn-primary btn-sm">Adicionar</button>
         </div>
       </div>
+    </div>
+<div class="col-12 col-sm-6 col-lg-4">
+  <div class="product-card h-100 p-3" data-cat="rochas">
+    <div class="ratio ratio-4x3 rounded-3 border mb-3 bg-white overflow-hidden">
+      <img src="./img/img2.png" alt="Meteorito Marciano" class="img-fluid"
+           style="width:100%; height:100%; object-fit:cover; object-position:top center;">
+    </div>
+    <h5 class="fw-semibold mb-1">Meteorito Marciano (réplica)</h5>
+    <p class="text-secondary small mb-2">Textura porosa e etiqueta de catalogação.</p>
+    <div class="d-flex justify-content-between align-items-center">
+      <span class="price text-primary fs-5">R$ 249,90</span>
+      <button class="btn btn-primary btn-sm">Adicionar</button>
+    </div>
+  </div>
+</div>
+
+<div class="col-12 col-sm-6 col-lg-4">
+  <div class="product-card h-100 p-3" data-cat="sondas">
+    <div class="ratio ratio-4x3 rounded-3 border mb-3 bg-white overflow-hidden">
+      <img src="./img/img3.png" alt="Mini Sonda Voyager" class="img-fluid"
+           style="width:100%; height:100%; object-fit:cover; object-position:top center;">
+    </div>
+    <h5 class="fw-semibold mb-1">Mini Sonda Voyager</h5>
+    <p class="text-secondary small mb-2">Miniatura detalhada com datas de lançamento.</p>
+    <div class="d-flex justify-content-between align-items-center">
+      <span class="price text-primary fs-5">R$ 149,00</span>
+      <button class="btn btn-primary btn-sm">Adicionar</button>
+    </div>
+  </div>
+</div>
+
+<div class="col-12 col-sm-6 col-lg-4">
+  <div class="product-card h-100 p-3" data-cat="posteres">
+    <div class="ratio ratio-4x3 rounded-3 border mb-3 bg-white overflow-hidden">
+      <img src="./img/img4.png" alt="Pôster Mapas Estelares" class="img-fluid"
+           style="width:100%; height:100%; object-fit:cover; object-position:top center;">
+    </div>
+    <h5 class="fw-semibold mb-1">Pôster Mapas Estelares (A2)</h5>
+    <p class="text-secondary small mb-2">Constelações e escalas de distância.</p>
+    <div class="d-flex justify-content-between align-items-center">
+      <span class="price text-primary fs-5">R$ 79,90</span>
+      <button class="btn btn-primary btn-sm">Adicionar</button>
+    </div>
+  </div>
+</div>
+
+<div class="col-12 col-sm-6 col-lg-4">
+  <div class="product-card h-100 p-3" data-cat="souvenires">
+    <div class="ratio ratio-4x3 rounded-3 border mb-3 bg-white overflow-hidden">
+      <img src="./img/img5.png" alt="Chaveiro Planeta Anelado" class="img-fluid"
+           style="width:100%; height:100%; object-fit:cover; object-position:top center;">
+    </div>
+    <h5 class="fw-semibold mb-1">Chaveiro Planeta Anelado</h5>
+    <p class="text-secondary small mb-2">Acrílico translúcido com brilho suave.</p>
+    <div class="d-flex justify-content-between align-items-center">
+      <span class="price text-primary fs-5">R$ 29,90</span>
+      <button class="btn btn-primary btn-sm">Adicionar</button>
+    </div>
+  </div>
+</div>
+
 
     </section>
   </main>
@@ -204,12 +235,63 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="container-fluid py-5 mt-5">
-    <div class="container text-center">
-      <h5 class="fw-bold">GalacticShop</h5>
-      <p class="text-secondary">Loja educativa de astronomia e espaço • © 2025</p>
+<footer class="footer mt-5 pt-5 pb-4 text-light" style="background:#0d1117;">
+  <div class="container">
+    <div class="row g-4">
+      
+      <!-- COLUNA 1 -->
+      <div class="col-12 col-md-3">
+        <h5 class="fw-bold mb-3 text-primary">GalacticShop</h5>
+        <p class="small text-secondary">
+          Loja de itens espaciais, réplicas científicas e souvenires cósmicos.  
+          Explore, aprenda e leve um pedaço do universo para casa.
+        </p>
+      </div>
+
+      <!-- COLUNA 2 -->
+      <div class="col-6 col-md-3">
+        <h6 class="fw-semibold mb-3">Explorar</h6>
+        <ul class="list-unstyled small text-secondary">
+          <li><a href="#produtos" class="text-decoration-none text-secondary">Catálogo</a></li>
+          <li><a href="#estudo" class="text-decoration-none text-secondary">Estudo</a></li>
+          <li><a href="#" class="text-decoration-none text-secondary">Novidades</a></li>
+          <li><a href="#" class="text-decoration-none text-secondary">Promoções</a></li>
+        </ul>
+      </div>
+
+      <!-- COLUNA 3 -->
+      <div class="col-6 col-md-3">
+        <h6 class="fw-semibold mb-3">Institucional</h6>
+        <ul class="list-unstyled small text-secondary">
+          <li><a href="#" class="text-decoration-none text-secondary">Sobre nós</a></li>
+          <li><a href="#" class="text-decoration-none text-secondary">Termos de uso</a></li>
+          <li><a href="#" class="text-decoration-none text-secondary">Política de privacidade</a></li>
+          <li><a href="#" class="text-decoration-none text-secondary">Contato</a></li>
+        </ul>
+      </div>
+
+      <!-- COLUNA 4 -->
+      <div class="col-12 col-md-3">
+        <h6 class="fw-semibold mb-3">Redes Sociais</h6>
+        <ul class="list-unstyled small text-secondary">
+          <li><a href="#" class="text-decoration-none text-secondary">Instagram</a></li>
+          <li><a href="#" class="text-decoration-none text-secondary">YouTube</a></li>
+          <li><a href="#" class="text-decoration-none text-secondary">Twitter / X</a></li>
+          <li><a href="#" class="text-decoration-none text-secondary">TikTok</a></li>
+        </ul>
+      </div>
+
     </div>
-  </footer>
+
+    <hr class="border-secondary my-4">
+
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center small text-secondary">
+      <span>© 2025 GalacticShop. Todos os direitos reservados.</span>
+      <span>Feito com ☄️ Bootstrap 5</span>
+    </div>
+  </div>
+</footer>
+
 
   <!-- FILTRO E BUSCA -->
   <script>
