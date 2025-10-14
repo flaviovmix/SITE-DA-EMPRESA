@@ -1,0 +1,61 @@
+:root{
+      --bg: #f7f9fc;
+      --card: #ffffff;
+      --ink: #0f172a;
+      --muted: #6b7280;
+      --brand: #5b8def; /* azul "estudo" */
+      --brand-2:#8a5bff; /* lilás espacial */
+      --accent:#22c55e;  /* sucesso */
+      --ring: rgba(91,141,239,.35);
+    }
+    html,body{background: var(--bg); color: var(--ink); font-family: 'Plus Jakarta Sans', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji';}
+
+    /* --- Hero with cosmic gradient and floating stars --- */
+    .hero{
+      position: relative;
+      overflow: clip;
+      border-radius: 1.5rem;
+      background: radial-gradient(1200px 600px at 10% 20%, #ffffff 0%, #eef4ff 38%, #ecf3ff 40%, #eaf0ff 42%, #e7eeff 45%, #e3ecff 48%, #e0eaff 53%, #dbe6ff 60%, #d6e3ff 70%, #d2e1ff 80%, #cfe0ff 100%);
+      box-shadow: 0 10px 30px rgba(91,141,239,.15);
+    }
+    .hero::before, .hero::after{
+      content:""; position:absolute; inset:-20%;
+      background: radial-gradient(600px 300px at 80% 30%, rgba(138,91,255,.15), transparent 60%),
+                  radial-gradient(500px 260px at 30% 70%, rgba(91,141,239,.18), transparent 70%);
+      filter: blur(10px);
+      animation: drift 40s linear infinite;
+    }
+    .hero::after{ animation-direction: reverse; opacity:.6; }
+    @keyframes drift{ from{transform: translateX(0)} to{ transform: translateX(-6%) } }
+
+    .stars{
+      position:absolute; inset:0; pointer-events:none; overflow:hidden;
+    }
+    .star{ position:absolute; width:2px; height:2px; background: #9fb8ff; border-radius: 50%; opacity: .8; animation: float 9s ease-in-out infinite; }
+    @keyframes float{ 0%{transform: translateY(0)} 50%{transform: translateY(-14px)} 100%{transform: translateY(0)} }
+
+    .hero-illust{ max-width: 520px; }
+
+    /* Cards */
+    .product-card{
+      background: var(--card); border:1px solid #eef2ff; border-radius: 1.25rem;
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    }
+    .product-card:hover{ transform: translateY(-6px); box-shadow: 0 16px 40px rgba(91,141,239,.18); border-color: #dbe6ff; }
+    .badge-new{ background: linear-gradient(110deg,var(--brand),var(--brand-2)); }
+    .price{ font-weight: 700; letter-spacing: .2px; }
+    .icon-btn{ border-radius: 100rem; border:1px solid #e8edff; }
+
+    /* Scroll-reveal */
+    .reveal{ opacity:0; transform: translateY(16px); transition: .6s ease; }
+    .reveal.visible{ opacity:1; transform: none; }
+
+    /* Study section */
+    .study-card{ border-radius: 1rem; background: linear-gradient(180deg,#ffffff, #f7faff); border: 1px solid #ecf1ff; }
+
+    /* Footer */
+    footer a{ color: var(--muted); text-decoration: none; }
+    footer a:hover{ color: var(--ink); }
+
+    /* Tiny utility */
+    .ring:focus{ outline: none; box-shadow: 0 0 0 .35rem var(--ring); }
