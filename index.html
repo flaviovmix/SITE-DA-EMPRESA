@@ -11,18 +11,19 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap"
     rel="stylesheet">
-    <link rel="stylesheet" href="./css/base.css">
-    <link rel="stylesheet" href="./css/cards.css">
-    <link rel="stylesheet" href="./css/hero-video.css">
-    <link rel="stylesheet" href="./css/parallax.css">
-    <link rel="stylesheet" href="./css/hero.css">
-    <link rel="stylesheet" href="./css/footer.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/cards.css">
+  <link rel="stylesheet" href="./css/hero-video.css">
+  <link rel="stylesheet" href="./css/parallax.css">
+  <link rel="stylesheet" href="./css/hero.css">
+  <link rel="stylesheet" href="./css/footer.css">
+  <link rel="stylesheet" href="./css/comentario.css">
 </head>
 
 <body>
 
   <!-- HERO / CARROSSEL -->
-<!-- <div id="heroCarousel" class="carousel slide hero-scroll mb-5" data-bs-ride="carousel">
+  <!-- <div id="heroCarousel" class="carousel slide hero-scroll mb-5" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active" style="background-image: url('./img/carrossel1.png');">
       <div class="carousel-caption d-md-block">
@@ -52,29 +53,31 @@
   </button>
 </div> -->
 
-<!-- HERO / VÍDEO PARALLAX -->
-<section class="hero-video">
-  <video autoplay muted loop playsinline id="bg-video">
-    <source src="./videos/EXEMPLO DE DRONE.mp4" type="video/mp4">
-    Seu navegador não suporta vídeos HTML5.
-  </video>
+  <!-- HERO / VÍDEO PARALLAX -->
+  <section class="hero-video">
+    <video autoplay muted loop playsinline id="bg-video">
+      <source src="./videos/EXEMPLO DE DRONE.mp4" type="video/mp4">
+      Seu navegador não suporta vídeos HTML5.
+    </video>
 
-  <div class="hero-caption text-center">
-    <h1 class="fw-bold">TRANSMISSÕES AO VIVO</h1>
-    <p>Tudo para seu evento.</p>
-  </div>
-</section>
+    <div class="hero-caption text-center">
+      <h1 class="fw-bold">TRANSMISSÕES AO VIVO</h1>
+      <p>Tudo para seu evento.</p>
+    </div>
+  </section>
 
 
   <main class="container">
-<div class="seleção-elementos" id="selecao-produtos"></div>
+    <div class="seleção-elementos" id="selecao-produtos"></div>
     <!-- CONTROLES -->
-    <section  class="botoes-navegacao mb-4 d-flex flex-wrap justify-content-center align-items-center gap-2">
+    <section class="botoes-navegacao mb-4 d-flex flex-wrap justify-content-center align-items-center gap-2">
       <div class="btn-group" role="group" aria-label="Categorias">
         <button class="btn btn-outline-secondary" data-filter="all"><a href="#selecao-produtos">Todos</a></button>
-        <button class="btn btn-outline-secondary active" data-filter="rochas"><a href="#selecao-produtos">PodCast</a></button>
+        <button class="btn btn-outline-secondary active" data-filter="rochas"><a
+            href="#selecao-produtos">PodCast</a></button>
         <button class="btn btn-outline-secondary" data-filter="sondas"><a href="#selecao-produtos">Esporte</a></button>
-        <button class="btn btn-outline-secondary" data-filter="posteres"><a href="#selecao-produtos">Auditório</a></button>
+        <button class="btn btn-outline-secondary" data-filter="posteres"><a
+            href="#selecao-produtos">Auditório</a></button>
         <!-- <button class="btn btn-outline-secondary" data-filter="souvenires">Souvenires</button> -->
       </div>
     </section>
@@ -174,6 +177,126 @@
     </div>
   </section>
 
+  <!-- Comentários -->
+  <section class="container area-comentarios my-5">
+    <h3 class="mb-4">Comentários</h3>
+
+    <div class="comment-list">
+
+      <!-- Comentário -->
+      <article class="comment card shadow-sm">
+        <div class="card-body d-flex gap-3">
+          <img class="comment-avatar" src="./img/avatar1.png" alt="Foto de Bruno Lima" width="56" height="56">
+
+          <div class="flex-grow-1">
+            <header class="d-flex flex-wrap align-items-center gap-2">
+              <h5 class="mb-0 me-2 comment-author">Ana Souza</h5>
+
+              <span class="ms-auto text-muted small">
+                <time datetime="2025-10-10T18:32:00">10 out 2025, 18:32</time>
+              </span>
+            </header>
+            <a class="comment-social" href="https://instagram.com/anasouza" target="_blank" rel="noopener">
+              <i class="fa-brands fa-instagram"></i> @anasouza
+            </a>
+            <p class="comment-desc">
+              Diretor do grupo globo 🚀
+            </p>
+          </div>
+
+        </div>
+        <hr>
+        <div class="comentario-mensagem">
+          
+          <p class="comment-message mb-0 mt-2">
+            <strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+            been the industry's standard dummy text ever since the 1500s,
+          </p>
+          <p class="comment-message mb-0 mt-2">
+            When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived
+            not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+          </p>
+        </div>
+      </article>
+
+
+
+      <!-- Comentário -->
+      <article class="comment card shadow-sm">
+        <div class="card-body d-flex gap-3">
+          <img class="comment-avatar" src="./img/avatar2.png" alt="Foto de Bruno Lima" width="56" height="56">
+
+          <div class="flex-grow-1">
+            <header class="d-flex flex-wrap align-items-center gap-2">
+              <h5 class="mb-0 me-2 comment-author">Ana Souza</h5>
+
+              <span class="ms-auto text-muted small">
+                <time datetime="2025-10-10T18:32:00">10 out 2025, 18:32</time>
+              </span>
+            </header>
+            <a class="comment-social" href="https://instagram.com/anasouza" target="_blank" rel="noopener">
+              <i class="fa-brands fa-instagram"></i> @anasouza
+            </a>
+            <p class="comment-desc">
+              Diretor do grupo globo 🚀
+            </p>
+          </div>
+
+        </div>
+        <hr>
+        <div class="comentario-mensagem">
+          
+          <p class="comment-message mb-0 mt-2">
+            <strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+            been the industry's standard dummy text ever since the 1500s,
+          </p>
+          <p class="comment-message mb-0 mt-2">
+            When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived
+            not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+          </p>
+        </div>
+      </article>
+      
+      <!-- Comentário -->
+      <article class="comment card shadow-sm">
+        <div class="card-body d-flex gap-3">
+          <img class="comment-avatar" src="./img/avatar3.png" alt="Foto de Bruno Lima" width="56" height="56">
+
+          <div class="flex-grow-1">
+            <header class="d-flex flex-wrap align-items-center gap-2">
+              <h5 class="mb-0 me-2 comment-author">Ana Souza</h5>
+
+              <span class="ms-auto text-muted small">
+                <time datetime="2025-10-10T18:32:00">10 out 2025, 18:32</time>
+              </span>
+            </header>
+            <a class="comment-social" href="https://instagram.com/anasouza" target="_blank" rel="noopener">
+              <i class="fa-brands fa-instagram"></i> @anasouza
+            </a>
+            <p class="comment-desc">
+              Diretor do grupo globo 🚀
+            </p>
+          </div>
+
+        </div>
+        <hr>
+        <div class="comentario-mensagem">
+          
+          <p class="comment-message mb-0 mt-2">
+            <strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+            been the industry's standard dummy text ever since the 1500s,
+          </p>
+          <p class="comment-message mb-0 mt-2">
+            When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived
+            not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+          </p>
+        </div>
+      </article>      
+
+    </div>
+  </section>
+
+
   <!-- FOOTER -->
   <footer class="footer pt-5 pb-4 text-light">
     <div class="container">
@@ -258,18 +381,18 @@
   </script>
 
   <script>
-const nav = document.querySelector('.botoes-navegacao');
-const posicaoInicial = nav.offsetTop;
+    const nav = document.querySelector('.botoes-navegacao');
+    const posicaoInicial = nav.offsetTop;
 
-window.addEventListener('scroll', () => {
-  if (window.scrollY >= posicaoInicial) {
-    nav.classList.add('fixo');
-  } else {
-    nav.classList.remove('fixo');
-  }
-});
+    window.addEventListener('scroll', () => {
+      if (window.scrollY >= posicaoInicial) {
+        nav.classList.add('fixo');
+      } else {
+        nav.classList.remove('fixo');
+      }
+    });
 
-  </script>  
+  </script>
 </body>
 
 </html>
