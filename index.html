@@ -13,6 +13,7 @@
     rel="stylesheet">
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/cards.css">
+    <link rel="stylesheet" href="./css/hero-video.css">
     <link rel="stylesheet" href="./css/parallax.css">
     <link rel="stylesheet" href="./css/hero.css">
     <link rel="stylesheet" href="./css/footer.css">
@@ -21,7 +22,7 @@
 <body>
 
   <!-- HERO / CARROSSEL -->
-<div id="heroCarousel" class="carousel slide hero-scroll mb-5" data-bs-ride="carousel">
+<!-- <div id="heroCarousel" class="carousel slide hero-scroll mb-5" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active" style="background-image: url('./img/carrossel1.png');">
       <div class="carousel-caption d-md-block">
@@ -49,19 +50,31 @@
   <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
     <span class="carousel-control-next-icon"></span>
   </button>
-</div>
+</div> -->
 
+<!-- HERO / VÍDEO PARALLAX -->
+<section class="hero-video">
+  <video autoplay muted loop playsinline id="bg-video">
+    <source src="./videos/EXEMPLO DE DRONE.mp4" type="video/mp4">
+    Seu navegador não suporta vídeos HTML5.
+  </video>
+
+  <div class="hero-caption text-center">
+    <h1 class="fw-bold">Explore o Universo com Estilo</h1>
+    <p>Itens autênticos e educativos do espaço sideral.</p>
+  </div>
+</section>
 
 
   <main class="container">
-<div class="seleção-elementos" id="selecao-produtos"><h2></div>
+<h2 class="seleção-elementos" id="selecao-produtos">Produtos</h2>
     <!-- CONTROLES -->
     <section  class="botoes-navegacao mb-4 d-flex flex-wrap justify-content-center align-items-center gap-2">
       <div class="btn-group" role="group" aria-label="Categorias">
-        <button class="btn btn-outline-secondary active" data-filter="all"><a href="#selecao-produtos">Tudo</a></button>
-        <button class="btn btn-outline-secondary" data-filter="rochas">Rochas</button>
-        <button class="btn btn-outline-secondary" data-filter="sondas">Sondas</button>
-        <button class="btn btn-outline-secondary" data-filter="posteres">Pôsteres</button>
+        <button class="btn btn-outline-secondary" data-filter="all"><a href="#selecao-produtos">Todos</a></button>
+        <button class="btn btn-outline-secondary active" data-filter="rochas"><a href="#selecao-produtos">PodCast</a></button>
+        <button class="btn btn-outline-secondary" data-filter="sondas"><a href="#selecao-produtos">Esporte</a></button>
+        <button class="btn btn-outline-secondary" data-filter="posteres"><a href="#selecao-produtos">Auditório</a></button>
         <!-- <button class="btn btn-outline-secondary" data-filter="souvenires">Souvenires</button> -->
       </div>
     </section>

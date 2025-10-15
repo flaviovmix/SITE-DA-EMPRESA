@@ -1,0 +1,54 @@
+.hero-video {
+  position: relative;
+  height: 80svh;
+  height: 80vh;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;   /* legenda embaixo — troque por center se quiser no meio */
+  justify-content: center;
+  color: #fff;
+}
+
+/* VÍDEO CENTRALIZADO E COBRINDO TUDO */
+.hero-video video {
+  position: fixed;          /* fica fixo no fundo (efeito parallax) */
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;         /* cobre toda a tela */
+  transform: translate(-50%, -50%); /* centraliza o vídeo no meio exato */
+  z-index: -1;
+  filter: brightness(0.7);
+}
+
+/* LEGENDA */
+.hero-caption {
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(6px);
+  border-radius: 0.75rem;
+  padding: 1.5rem 2rem;
+  margin-bottom: 5vh;
+  text-align: center;
+}
+
+/* MOBILE */
+@media (max-width: 767.98px) {
+  .hero-video {
+    height: 60svh;
+    height: 60vh;
+  }
+
+  .hero-caption {
+    padding: 1rem;
+    margin-bottom: 3vh;
+  }
+
+  .hero-caption h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-caption p {
+    font-size: 0.9rem;
+  }
+}
