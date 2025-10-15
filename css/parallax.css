@@ -1,14 +1,43 @@
 .parallax {
+  position: relative;
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
   height: 85vh;
   color: #fff;
   text-shadow: 0 2px 6px rgba(0, 0, 0, .5);
-  padding: 100px 20px;
+  padding: 0 20px;
   margin: 20px auto 0 auto;
+  display: flex;
+  align-items: flex-end; /* 👈 empurra o conteúdo pra parte de baixo */
+  justify-content: center; /* centraliza horizontalmente */
+  overflow: hidden;
 }
 
-.parallax h2 {
+/* Camada escura sobre a imagem (pra leitura melhor) */
+.parallax::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+/* Conteúdo acima da camada escura */
+.parallax .conteudo {
+  position: relative;
+  z-index: 2;
+  padding-bottom: 60px; /* distância do fundo da tela */
+  text-align: center;
+}
+
+.parallax .conteudo h2 {
   font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.parallax .conteudo p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
 }
