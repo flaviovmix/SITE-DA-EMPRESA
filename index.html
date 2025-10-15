@@ -158,23 +158,70 @@
     }
 
    
+/* ====== Altura e base ====== */
+.hero-parallax {
+  height: 80svh;
+  height: 80vh;
+  overflow: clip; /* evita vazamentos sem quebrar sticky */
+}
 
+@media (max-width: 767.98px) {
+  .hero-parallax { height: 60svh; height: 60vh; }
+}
 
+.hero-parallax .carousel-inner,
+.hero-parallax .carousel-item { height: 100%; }
 
-
-.hero-scroll .carousel-item {
-  height: 100vh; /* ocupa a tela toda */
+/* ====== Slide com fundo parallax real ====== */
+.hero-parallax .carousel-item {
   background-size: cover;
-  background-position: center;
-  background-attachment: fixed; /* <-- o truque do parallax real */
+  background-position: center center;
+  background-attachment: fixed;     /* efeito parallax real */
+  position: relative;
+  z-index: 1;
 }
 
-.hero-scroll .carousel-caption {
-  background: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(4px);
-  border-radius: 8px;
-  padding: 1.5rem;
+/* overlay sutil opcional para legibilidade */
+.hero-parallax .carousel-item::before {
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,.25), rgba(0,0,0,.25));
+  z-index: 1;
 }
+
+/* ====== Legenda sempre no centro visível ======
+   Usamos sticky para “ancorar” no meio do viewport enquanto a seção estiver na tela */
+.hero-parallax .caption-center {
+  position: sticky;
+  top: 50vh;                          /* ancora no meio do viewport */
+  transform: translateY(-50%);
+  z-index: 2;                         /* acima do overlay */
+  text-align: center;
+  width: min(92%, 1100px);
+  margin: 0 auto;
+  color: #fff;
+  pointer-events: none;               /* não bloqueia os botões */
+}
+
+.hero-parallax .caption-center h1,
+.hero-parallax .caption-center p {
+  display: inline-block;
+  background: rgba(0,0,0,.35);
+  backdrop-filter: blur(6px);
+  padding: .5rem 1rem;
+  border-radius: .75rem;
+  margin: .25rem 0;
+}
+
+/* ====== Controles sempre por cima ====== */
+.hero-parallax .carousel-control-prev,
+.hero-parallax .carousel-control-next {
+  z-index: 3;
+  filter: drop-shadow(0 0 6px rgba(0,0,0,.6));
+}
+
+/* ====== Remoção defensiva: se sobrar <img>, esconda ====== */
+.hero-parallax .carousel-item > img { display: none !important; }
 
 
   </style>
@@ -183,22 +230,24 @@
 <body>
 
   <!-- HERO / CARROSSEL -->
-<div id="heroCarousel" class="carousel slide hero-scroll mb-5" data-bs-ride="carousel">
+<div id="heroCarousel" class="carousel slide hero-parallax mb-5" data-bs-ride="carousel">
   <div class="carousel-inner">
-    <div class="carousel-item active" style="background-image: url('./img/carrossel1.png');">
-      <div class="carousel-caption d-none d-md-block">
+    <div class="carousel-item active" style="background-image:url('./img/carrossel1.png')">
+      <div class="caption-center">
         <h1 class="fw-bold">Explore o Universo com Estilo</h1>
         <p>Itens autênticos e educativos do espaço sideral.</p>
       </div>
     </div>
-    <div class="carousel-item" style="background-image: url('./img/carrossel2.png');">
-      <div class="carousel-caption d-none d-md-block">
+
+    <div class="carousel-item" style="background-image:url('./img/carrossel2.png')">
+      <div class="caption-center">
         <h1 class="fw-bold">Colecione Rochas e Sondas</h1>
         <p>Réplicas científicas e souvenires exclusivos.</p>
       </div>
     </div>
-    <div class="carousel-item" style="background-image: url('./img/carrossel3.png');">
-      <div class="carousel-caption d-none d-md-block">
+
+    <div class="carousel-item" style="background-image:url('./img/carrossel3.png')">
+      <div class="caption-center">
         <h1 class="fw-bold">Astronomia e Aprendizado</h1>
         <p>Produtos criados para estudantes e entusiastas.</p>
       </div>
@@ -212,6 +261,7 @@
     <span class="carousel-control-next-icon"></span>
   </button>
 </div>
+
 
 
 
@@ -405,6 +455,25 @@
       });
     });
   </script>
+
+  <script>
+(function () {
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  if (!isIOS) return;
+
+  const slides = document.querySelectorAll('.hero-parallax .carousel-item');
+  function onScroll() {
+    const y = window.scrollY || window.pageYOffset;
+    slides.forEach(el => {
+      // move o background um pouco mais devagar que o scroll
+      el.style.backgroundPosition = `center calc(50% + ${-y * 0.2}px)`;
+    });
+  }
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+})();
+</script>
+
 </body>
 
 </html>
