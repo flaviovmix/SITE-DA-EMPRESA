@@ -11,175 +11,11 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap"
     rel="stylesheet">
-  <style>
-    body {
-      font-family: "Plus Jakarta Sans", sans-serif;
-      background: #f6f9ff;
-    }
-
-    /* Altura do carrossel (desktop) */
-    .hero-carousel {
-      height: 80svh;
-      /* usa viewport “seguro” em mobile moderno; cai pra vh se não suportar */
-      height: 80vh;
-      overflow: hidden;
-    }
-
-    /* Faz todos os níveis internos herdarem a altura */
-    .hero-carousel .carousel-inner,
-    .hero-carousel .carousel-item {
-      height: 100%;
-    }
-
-    /* A imagem preenche e corta o excesso */
-    .hero-carousel .carousel-item img {
-      display: block;
-      width: 100%;
-      /* height: 100%; */
-      object-fit: cover;
-      /* corta lateral/vertical quando precisar */
-      object-position: top center;
-      /* foco no topo */
-    }
-
-    /* Ajuste específico para celular */
-    @media (max-width: 767.98px) {
-      .hero-carousel {
-        height: 60svh;
-        /* ~60% da tela no mobile */
-        height: 60vh;
-      }
-    }
-
-    .parallax {
-      background-attachment: fixed;
-      background-size: cover;
-      background-position: center;
-      height: 85vh;
-      color: #fff;
-      text-shadow: 0 2px 6px rgba(0, 0, 0, .5);
-      padding: 100px 20px;
-    }
-
-    .parallax h2 {
-      font-weight: 700;
-    }
-
-    .product-card:hover {
-      transform: translateY(-4px);
-      transition: .3s;
-      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .1);
-    }
-
-    .ratio img {
-      object-fit: contain;
-      width: 100%;
-      height: 100%;
-    }
-
-    footer {
-      background: #fff;
-    }
-
-    .ratio img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: top center;
-    }
-
-    .hero-carousel img {
-      width: 100%;
-      height: 80vh;
-      /* mantém o carrossel alto e impactante */
-      object-fit: cover;
-      /* corta o excesso */
-      object-position: top center;
-      /* centraliza o corte no topo */
-    }
-
-    .footer a:hover {
-      color: #ffffff !important;
-      text-decoration: underline;
-    }
-
-    .footer {
-      background: #0d1117;
-      /* cor espacial escura */
-    }
-
-    .product-card {
-      border: 1px solid rgba(255, 255, 255, 0.6);
-      /* borda clara translúcida */
-      border-radius: 1rem;
-      /* cantos mais suaves */
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-      /* sombra suave e elegante */
-      background: #ffffff;
-      /* garante contraste com o fundo */
-      transition: all 0.3s ease;
-    }
-
-    .product-card:hover {
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-      /* realce no hover */
-      transform: translateY(-4px);
-      /* leve elevação */
-    }
-
-    @media (max-width: 767.98px) {
-      .footer .row {
-        flex-direction: column !important;
-        /* força as colunas a empilhar */
-        align-items: center;
-        text-align: center;
-        /* centraliza texto e links */
-      }
-
-      .footer .col-6,
-      .footer .col-12,
-      .footer .col-md-3 {
-        width: 100% !important;
-        /* cada coluna ocupa toda a largura */
-        max-width: 480px;
-        /* largura máxima opcional */
-      }
-
-      .footer ul {
-        padding-left: 0;
-      }
-
-      .footer h5,
-      .footer h6 {
-        margin-top: 1rem;
-      }
-      .ratio-3x4 {
-        aspect-ratio: 3/4;
-      }
-    }
-
-   
-
-
-
-
-.hero-scroll .carousel-item {
-  height: 100vh; /* ocupa a tela toda */
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed; /* <-- o truque do parallax real */
-}
-
-.hero-scroll .carousel-caption {
-  background: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(4px);
-  border-radius: 8px;
-  padding: 1.5rem;
-}
-
-
-
-  </style>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/cards.css">
+    <link rel="stylesheet" href="./css/parallax.css">
+    <link rel="stylesheet" href="./css/hero.css">
+    <link rel="stylesheet" href="./css/footer.css">
 </head>
 
 <body>
@@ -188,19 +24,19 @@
 <div id="heroCarousel" class="carousel slide hero-scroll mb-5" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active" style="background-image: url('./img/carrossel1.png');">
-      <div class="carousel-caption d-none d-md-block">
+      <div class="carousel-caption d-md-block">
         <h1 class="fw-bold">Explore o Universo com Estilo</h1>
         <p>Itens autênticos e educativos do espaço sideral.</p>
       </div>
     </div>
     <div class="carousel-item" style="background-image: url('./img/carrossel2.png');">
-      <div class="carousel-caption d-none d-md-block">
+      <div class="carousel-caption d-md-block">
         <h1 class="fw-bold">Colecione Rochas e Sondas</h1>
         <p>Réplicas científicas e souvenires exclusivos.</p>
       </div>
     </div>
     <div class="carousel-item" style="background-image: url('./img/carrossel3.png');">
-      <div class="carousel-caption d-none d-md-block">
+      <div class="carousel-caption d-md-block">
         <h1 class="fw-bold">Astronomia e Aprendizado</h1>
         <p>Produtos criados para estudantes e entusiastas.</p>
       </div>
@@ -220,7 +56,7 @@
   <main class="container">
 
     <!-- CONTROLES -->
-    <section class="mb-4 d-flex flex-wrap justify-content-center align-items-center gap-2">
+    <section class="botoes-navegacao mb-4 d-flex flex-wrap justify-content-center align-items-center gap-2">
       <div class="btn-group" role="group" aria-label="Categorias">
         <button class="btn btn-outline-secondary active" data-filter="all">Tudo</button>
         <button class="btn btn-outline-secondary" data-filter="rochas">Rochas</button>
@@ -326,7 +162,7 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="footer mt-5 pt-5 pb-4 text-light" style="background:#0d1117;">
+  <footer class="footer mt-5 pt-5 pb-4 text-light">
     <div class="container">
       <div class="row g-4">
 

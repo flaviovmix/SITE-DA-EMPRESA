@@ -1,0 +1,37 @@
+.ratio img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.ratio img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  transition: .3s;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .1);
+}
+
+.product-card {
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  /* borda clara translúcida */
+  border-radius: 1rem;
+  /* cantos mais suaves */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  /* sombra suave e elegante */
+  background: #ffffff;
+  /* garante contraste com o fundo */
+  transition: all 0.3s ease;
+}
+
+.product-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  /* realce no hover */
+  transform: translateY(-4px);
+  /* leve elevação */
+}

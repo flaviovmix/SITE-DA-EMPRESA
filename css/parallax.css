@@ -1,0 +1,13 @@
+.parallax {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  height: 85vh;
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, .5);
+  padding: 100px 20px;
+}
+
+.parallax h2 {
+  font-weight: 700;
+}

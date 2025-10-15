@@ -1,0 +1,12 @@
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background: #f6f9ff;
+}
+
+.ratio-3x4 {
+  aspect-ratio: 3/4;
+}
+
+.botoes-navegacao {
+  margin-top: -20px;
+}
