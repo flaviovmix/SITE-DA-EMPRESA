@@ -29,6 +29,7 @@
   z-index: 2;
   padding-bottom: 60px; /* distância do fundo da tela */
   text-align: center;
+  z-index: 9999;
 }
 
 .parallax .conteudo h2 {
