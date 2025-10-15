@@ -12,6 +12,12 @@
   align-items: flex-end; /* 👈 empurra o conteúdo pra parte de baixo */
   justify-content: center; /* centraliza horizontalmente */
   overflow: hidden;
+  border-top: 5px solid white;
+}
+
+.sem-margem {
+  margin: 0;
+  
 }
 
 /* Camada escura sobre a imagem (pra leitura melhor) */
