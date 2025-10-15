@@ -12,7 +12,6 @@ body {
   padding: 0.75rem 0;
   transition: all 0.3s ease;
   border-bottom: 1px solid transparent;
-  margin-top: -45px;
   z-index: 10;
 }
 
@@ -38,9 +37,9 @@ body {
 
 
 .seleção-elementos {
-  padding: 20px;
   font-size: 1.5rem;
   text-align: center;
+  height: 1px !important;
 }
 
 a {
