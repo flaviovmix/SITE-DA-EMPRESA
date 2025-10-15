@@ -6,10 +6,35 @@ body {
 .ratio-3x4 {
   aspect-ratio: 3/4;
 }
-
 .botoes-navegacao {
-  margin-top: -20px;
+  position: relative; /* começa normal */
+  width: 100%; 
+  padding: 0.75rem 0;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid transparent;
+  z-index: 10;
 }
+
+/* Quando o JS adicionar a classe .fixo */
+.botoes-navegacao.fixo {
+  position: fixed;    /* sai do fluxo e cola no topo */
+  top: 0;
+  left: 0;
+  width: 100vw;       /* ocupa toda a largura da tela */
+  /* background: #0d1117; */
+  background-color: rgba(29, 29, 29, 0.406);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 1000;
+      
+    backdrop-filter: blur(6px);
+}
+
+/* Estilo dos botões quando fixo */
+.botoes-navegacao.fixo .btn-outline-secondary {
+  color: #fff;
+  border-color: rgba(255,255,255,0.4);
+}
+
 
 .seleção-elementos {
   padding: 20px;

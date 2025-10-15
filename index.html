@@ -60,14 +60,13 @@
   </video>
 
   <div class="hero-caption text-center">
-    <h1 class="fw-bold">Explore o Universo com Estilo</h1>
-    <p>Itens autênticos e educativos do espaço sideral.</p>
+    <h1 class="fw-bold">TRANSMISSÕES AO VIVO</h1>
+    <p>Tudo para seu evento.</p>
   </div>
 </section>
 
 
   <main class="container">
-<div class="seleção-elementos" id="selecao-produtos"></div>
     <!-- CONTROLES -->
     <section  class="botoes-navegacao mb-4 d-flex flex-wrap justify-content-center align-items-center gap-2">
       <div class="btn-group" role="group" aria-label="Categorias">
@@ -256,6 +255,20 @@
       });
     });
   </script>
+
+  <script>
+const nav = document.querySelector('.botoes-navegacao');
+const posicaoInicial = nav.offsetTop;
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY >= posicaoInicial) {
+    nav.classList.add('fixo');
+  } else {
+    nav.classList.remove('fixo');
+  }
+});
+
+  </script>  
 </body>
 
 </html>
