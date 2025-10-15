@@ -17,35 +17,39 @@
       background: #f6f9ff;
     }
 
-/* Altura do carrossel (desktop) */
-.hero-carousel {
-  height: 80svh; /* usa viewport “seguro” em mobile moderno; cai pra vh se não suportar */
-  height: 80vh;
-  overflow: hidden;
-}
+    /* Altura do carrossel (desktop) */
+    .hero-carousel {
+      height: 80svh;
+      /* usa viewport “seguro” em mobile moderno; cai pra vh se não suportar */
+      height: 80vh;
+      overflow: hidden;
+    }
 
-/* Faz todos os níveis internos herdarem a altura */
-.hero-carousel .carousel-inner,
-.hero-carousel .carousel-item {
-  height: 100%;
-}
+    /* Faz todos os níveis internos herdarem a altura */
+    .hero-carousel .carousel-inner,
+    .hero-carousel .carousel-item {
+      height: 100%;
+    }
 
-/* A imagem preenche e corta o excesso */
-.hero-carousel .carousel-item img {
-  display: block;
-  width: 100%;
-  /* height: 100%; */
-  object-fit: cover;         /* corta lateral/vertical quando precisar */
-  object-position: top center; /* foco no topo */
-}
+    /* A imagem preenche e corta o excesso */
+    .hero-carousel .carousel-item img {
+      display: block;
+      width: 100%;
+      /* height: 100%; */
+      object-fit: cover;
+      /* corta lateral/vertical quando precisar */
+      object-position: top center;
+      /* foco no topo */
+    }
 
-/* Ajuste específico para celular */
-@media (max-width: 767.98px) {
-  .hero-carousel {
-    height: 60svh; /* ~60% da tela no mobile */
-    height: 60vh;
-  }
-}
+    /* Ajuste específico para celular */
+    @media (max-width: 767.98px) {
+      .hero-carousel {
+        height: 60svh;
+        /* ~60% da tela no mobile */
+        height: 60vh;
+      }
+    }
 
     .parallax {
       background-attachment: fixed;
@@ -191,15 +195,15 @@
   <main class="container">
 
     <!-- CONTROLES -->
-<section class="mb-4 d-flex flex-wrap justify-content-center align-items-center gap-2 mt-0">
-  <div class="btn-group" role="group" aria-label="Categorias">
-    <button class="btn btn-outline-secondary active" data-filter="all">Tudo</button>
-    <button class="btn btn-outline-secondary" data-filter="rochas">Rochas</button>
-    <button class="btn btn-outline-secondary" data-filter="sondas">Sondas</button>
-    <button class="btn btn-outline-secondary" data-filter="posteres">Pôsteres</button>
-    <!-- <button class="btn btn-outline-secondary" data-filter="souvenires">Souvenires</button> -->
-  </div>
-</section>
+    <section class="mb-4 d-flex flex-wrap justify-content-center align-items-center gap-2">
+      <div class="btn-group" role="group" aria-label="Categorias">
+        <button class="btn btn-outline-secondary active" data-filter="all">Tudo</button>
+        <button class="btn btn-outline-secondary" data-filter="rochas">Rochas</button>
+        <button class="btn btn-outline-secondary" data-filter="sondas">Sondas</button>
+        <button class="btn btn-outline-secondary" data-filter="posteres">Pôsteres</button>
+        <!-- <button class="btn btn-outline-secondary" data-filter="souvenires">Souvenires</button> -->
+      </div>
+    </section>
 
 
     <!-- PRODUTOS -->
@@ -208,7 +212,7 @@
       <div class="col-12 col-sm-6 col-lg-4">
         <div class="product-card h-100 p-3" data-cat="rochas">
           <!-- AQUI: trocado ratio-16x9 → ratio-4x3 -->
-          <div class="ratio ratio-4x3 rounded-3 border mb-3 bg-white overflow-hidden">
+          <div class="ratio ratio-1x1 rounded-3 border mb-3 bg-white overflow-hidden">
             <img src="./img/img1.png" alt="Rocha Lunar" class="img-fluid"
               style="width:100%; height:100%; object-fit:cover; object-position:top center;">
           </div>
@@ -225,7 +229,7 @@
       </div>
       <div class="col-12 col-sm-6 col-lg-4">
         <div class="product-card h-100 p-3" data-cat="rochas">
-          <div class="ratio ratio-4x3 rounded-3 border mb-3 bg-white overflow-hidden">
+          <div class="ratio ratio-1x1 rounded-3 border mb-3 bg-white overflow-hidden">
             <img src="./img/img2.png" alt="Meteorito Marciano" class="img-fluid"
               style="width:100%; height:100%; object-fit:cover; object-position:top center;">
           </div>
@@ -240,7 +244,7 @@
 
       <div class="col-12 col-sm-6 col-lg-4">
         <div class="product-card h-100 p-3" data-cat="sondas">
-          <div class="ratio ratio-4x3 rounded-3 border mb-3 bg-white overflow-hidden">
+          <div class="ratio ratio-1x1 rounded-3 border mb-3 bg-white overflow-hidden">
             <img src="./img/img3.png" alt="Mini Sonda Voyager" class="img-fluid"
               style="width:100%; height:100%; object-fit:cover; object-position:top center;">
           </div>
@@ -255,7 +259,7 @@
 
       <div class="col-12 col-sm-6 col-lg-4">
         <div class="product-card h-100 p-3" data-cat="posteres">
-          <div class="ratio ratio-4x3 rounded-3 border mb-3 bg-white overflow-hidden">
+          <div class="ratio ratio-1x1 rounded-3 border mb-3 bg-white overflow-hidden">
             <img src="./img/img4.png" alt="Pôster Mapas Estelares" class="img-fluid"
               style="width:100%; height:100%; object-fit:cover; object-position:top center;">
           </div>
@@ -270,7 +274,7 @@
 
       <div class="col-12 col-sm-6 col-lg-4">
         <div class="product-card h-100 p-3" data-cat="souvenires">
-          <div class="ratio ratio-4x3 rounded-3 border mb-3 bg-white overflow-hidden">
+          <div class="ratio ratio-1x1 rounded-3 border mb-3 bg-white overflow-hidden">
             <img src="./img/img5.png" alt="Chaveiro Planeta Anelado" class="img-fluid"
               style="width:100%; height:100%; object-fit:cover; object-position:top center;">
           </div>
