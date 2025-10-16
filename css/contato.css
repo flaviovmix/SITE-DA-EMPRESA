@@ -1,4 +1,5 @@
 .contato {
+   
     background: #fff;
     border-bottom: 2px solid #ddd;
   }
@@ -43,4 +44,5 @@
 
   .contato h2 {
     color: #111;
+    margin-top: 30px;
   }
