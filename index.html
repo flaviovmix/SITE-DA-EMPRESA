@@ -72,13 +72,27 @@
     <!-- CONTROLES -->
     <section class="botoes-navegacao mb-4 d-flex flex-wrap justify-content-center align-items-center gap-2">
       <div class="btn-group" role="group" aria-label="Categorias">
-        <button class="btn btn-outline-secondary" data-filter="all"><a href="#selecao-produtos">Todos</a></button>
-        <button class="btn btn-outline-secondary active" data-filter="rochas"><a
-            href="#selecao-produtos">PodCast</a></button>
-        <button class="btn btn-outline-secondary" data-filter="sondas"><a href="#selecao-produtos">Esporte</a></button>
-        <button class="btn btn-outline-secondary" data-filter="posteres"><a
-            href="#selecao-produtos">Auditório</a></button>
-        <!-- <button class="btn btn-outline-secondary" data-filter="souvenires">Souvenires</button> -->
+        
+        <!-- <button class="btn btn-outline-secondary" data-filter="all">
+          <a href="#selecao-produtos">Todos</a>
+        </button> -->
+                
+        <button class="btn btn-outline-secondary" onclick="escurecerVideo()" data-filter="esporte">
+          <a href="#selecao-produtos">Esporte</a>
+        </button>
+        
+        <button class="btn btn-outline-secondary" onclick="escurecerVideo()" data-filter="corporativo">
+          <a href="#selecao-produtos">Corporativo</a>
+        </button>
+
+        <button class="btn btn-outline-secondary" onclick="escurecerVideo()" data-filter="posteres">
+          <a href="#parallax">Parallax</a>
+        </button>
+
+        <button class="btn btn-outline-secondary" onclick="escurecerVideo()" data-filter="posteres">
+          <a href="#comentarios">Comentários</a>
+        </button>
+        
       </div>
     </section>
 
@@ -86,11 +100,12 @@
     <!-- PRODUTOS -->
     <section id="produtos" class="row g-4">
 
+      <!-- CARD 1 -->
       <div class="col-12 col-sm-6 col-lg-4">
-        <div class="product-card h-100 p-3" data-cat="rochas">
+        <div class="product-card h-100 p-3" data-cat="esporte">
           <!-- AQUI: trocado ratio-16x9 → ratio-4x3 -->
           <div class="ratio ratio-3x4 rounded-3 border mb-3 bg-white overflow-hidden">
-            <img src="./img/img1.png" alt="Rocha Lunar" class="img-fluid"
+            <img src="./img/card1.png" alt="Rocha Lunar" class="img-fluid"
               style="width:100%; height:100%; object-fit:cover; object-position:top center;">
           </div>
 
@@ -104,10 +119,12 @@
           </div>
         </div>
       </div>
+
+      <!-- CARD 2 -->
       <div class="col-12 col-sm-6 col-lg-4">
-        <div class="product-card h-100 p-3" data-cat="rochas">
+        <div class="product-card h-100 p-3" data-cat="corporativo">
           <div class="ratio ratio-3x4 rounded-3 border mb-3 bg-white overflow-hidden">
-            <img src="./img/img2.png" alt="Meteorito Marciano" class="img-fluid"
+            <img src="./img/card2.png" alt="Meteorito Marciano" class="img-fluid"
               style="width:100%; height:100%; object-fit:cover; object-position:top center;">
           </div>
           <h5 class="fw-semibold mb-1">Meteorito Marciano (réplica)</h5>
@@ -119,10 +136,11 @@
         </div>
       </div>
 
+      <!-- CARD 3 -->
       <div class="col-12 col-sm-6 col-lg-4">
-        <div class="product-card h-100 p-3" data-cat="sondas">
+        <div class="product-card h-100 p-3" data-cat="corporativo">
           <div class="ratio ratio-3x4 rounded-3 border mb-3 bg-white overflow-hidden">
-            <img src="./img/img3.png" alt="Mini Sonda Voyager" class="img-fluid"
+            <img src="./img/card3.png" alt="Mini Sonda Voyager" class="img-fluid"
               style="width:100%; height:100%; object-fit:cover; object-position:top center;">
           </div>
           <h5 class="fw-semibold mb-1">Mini Sonda Voyager</h5>
@@ -134,10 +152,11 @@
         </div>
       </div>
 
+      <!-- CARD 4 -->
       <div class="col-12 col-sm-6 col-lg-4">
-        <div class="product-card h-100 p-3" data-cat="posteres">
+        <div class="product-card h-100 p-3" data-cat="corporativo">
           <div class="ratio ratio-3x4 rounded-3 border mb-3 bg-white overflow-hidden">
-            <img src="./img/img4.png" alt="Pôster Mapas Estelares" class="img-fluid"
+            <img src="./img/card4.png" alt="Pôster Mapas Estelares" class="img-fluid"
               style="width:100%; height:100%; object-fit:cover; object-position:top center;">
           </div>
           <h5 class="fw-semibold mb-1">Pôster Mapas Estelares (A2)</h5>
@@ -149,10 +168,11 @@
         </div>
       </div>
 
+      <!-- CARD 5 -->
       <div class="col-12 col-sm-6 col-lg-4">
-        <div class="product-card h-100 p-3" data-cat="souvenires">
+        <div class="product-card h-100 p-3" data-cat="esporte">
           <div class="ratio ratio-3x4 rounded-3 border mb-3 bg-white overflow-hidden">
-            <img src="./img/img5.png" alt="Chaveiro Planeta Anelado" class="img-fluid"
+            <img src="./img/card5.png" alt="Chaveiro Planeta Anelado" class="img-fluid"
               style="width:100%; height:100%; object-fit:cover; object-position:top center;">
           </div>
           <h5 class="fw-semibold mb-1">Chaveiro Planeta Anelado</h5>
@@ -167,62 +187,61 @@
 
     </section>
   </main>
-
-  <!-- PARALLAX DEPOIS -->
-  <section class="parallax text-center" style="background-image:url('./img/img6.png');">
+<div id="parallax" ></div>
+  <!-- PARALLAX 1 -->
+  <section class="parallax text-center" style="background-image:url('./img/parallax1.png');">
     <div class="conteudo">
       <h2>Levamos o Mundo ao Vivo até Você</h2>
-      <p class="lead">Cada evento é uma experiência única — capturada com precisão, transmitida com qualidade e entregue sem atrasos.</p>
+      <p class="lead">Cada evento é uma experiência única — capturada com precisão, transmitida com qualidade e entregue
+        sem atrasos.</p>
       <p class="lead">Da arena ao auditório, estamos onde a emoção acontece.</p>
     </div>
   </section>
 
-  <section class="parallax sem-margem text-center" style="background-image:url('./img/img2.png');">
+  <!-- PARALLAX 2 -->
+  <section class="parallax sem-margem text-center" style="background-image:url('./img/parallax2.png');">
     <div class="conteudo">
       <h2>Levamos o Mundo ao Vivo até Você</h2>
-      <p class="lead">Cada evento é uma experiência única — capturada com precisão, transmitida com qualidade e entregue sem atrasos.</p>
+      <p class="lead">Cada evento é uma experiência única — capturada com precisão, transmitida com qualidade e entregue
+        sem atrasos.</p>
       <p class="lead">Da arena ao auditório, estamos onde a emoção acontece.</p>
     </div>
   </section>
 
-  <section class="parallax sem-margem text-center" style="background-image:url('./img/img3.png');">
+  <!-- PARALLAX 3 -->
+  <section class="parallax sem-margem text-center" style="background-image:url('./img/parallax3.png');">
     <div class="conteudo">
       <h2>Levamos o Mundo ao Vivo até Você</h2>
-      <p class="lead">Cada evento é uma experiência única — capturada com precisão, transmitida com qualidade e entregue sem atrasos.</p>
+      <p class="lead">Cada evento é uma experiência única — capturada com precisão, transmitida com qualidade e entregue
+        sem atrasos.</p>
       <p class="lead">Da arena ao auditório, estamos onde a emoção acontece.</p>
     </div>
   </section>
 
-  <section class="parallax sem-margem text-center" style="background-image:url('./img/img4.png');">
+  <!-- PARALLAX 4 -->
+  <section class="parallax sem-margem text-center" style="background-image:url('./img/parallax4.png');">
     <div class="conteudo">
       <h2>Levamos o Mundo ao Vivo até Você</h2>
-      <p class="lead">Cada evento é uma experiência única — capturada com precisão, transmitida com qualidade e entregue sem atrasos.</p>
-      <p class="lead">Da arena ao auditório, estamos onde a emoção acontece.</p>
-    </div>
-  </section>
-
-  <section class="parallax sem-margem text-center" style="background-image:url('./img/img7.png');">
-    <div class="conteudo">
-      <h2>Levamos o Mundo ao Vivo até Você</h2>
-      <p class="lead">Cada evento é uma experiência única — capturada com precisão, transmitida com qualidade e entregue sem atrasos.</p>
+      <p class="lead">Cada evento é uma experiência única — capturada com precisão, transmitida com qualidade e entregue
+        sem atrasos.</p>
       <p class="lead">Da arena ao auditório, estamos onde a emoção acontece.</p>
     </div>
   </section>
 
   <!-- Comentários -->
-  <section class="container area-comentarios my-5">
+  <section id="comentarios" class="container area-comentarios my-5">
     <h3 class="mb-4">Comentários</h3>
 
     <div class="comment-list">
 
-      <!-- Comentário -->
+      <!-- COMENTARIO 1 -->
       <article class="comment card shadow-sm">
         <div class="card-body d-flex gap-3">
-          <img class="comment-avatar" src="./img/avatar1.png" alt="Foto de Bruno Lima" width="56" height="56">
+          <img class="comment-avatar" src="./img/comentario1.png" alt="Foto de Bruno Lima" width="56" height="56">
 
           <div class="flex-grow-1">
             <header class="d-flex flex-wrap align-items-center gap-2">
-              <h5 class="mb-0 me-2 comment-author">Ana Souza</h5>
+              <h5 class="mb-0 me-2 comment-author">MAGA NEGRA</h5>
 
               <span class="ms-auto text-muted small">
                 <time datetime="2025-10-10T18:32:00">out-2025</time>
@@ -239,7 +258,7 @@
         </div>
         <hr>
         <div class="comentario-mensagem">
-          
+
           <p class="comment-message mb-0 mt-2">
             <strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
             been the industry's standard dummy text ever since the 1500s,
@@ -251,16 +270,14 @@
         </div>
       </article>
 
-
-
-      <!-- Comentário -->
+      <!-- COMENTARIO 2 -->
       <article class="comment card shadow-sm">
         <div class="card-body d-flex gap-3">
-          <img class="comment-avatar" src="./img/avatar2.png" alt="Foto de Bruno Lima" width="56" height="56">
+          <img class="comment-avatar" src="./img/comentario2.png" alt="Foto de Bruno Lima" width="56" height="56">
 
           <div class="flex-grow-1">
             <header class="d-flex flex-wrap align-items-center gap-2">
-              <h5 class="mb-0 me-2 comment-author">Ana Souza</h5>
+              <h5 class="mb-0 me-2 comment-author">RAVENA</h5>
 
               <span class="ms-auto text-muted small">
                 <time datetime="2025-10-10T18:32:00">out-2025</time>
@@ -277,7 +294,7 @@
         </div>
         <hr>
         <div class="comentario-mensagem">
-          
+
           <p class="comment-message mb-0 mt-2">
             <strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
             been the industry's standard dummy text ever since the 1500s,
@@ -288,15 +305,15 @@
           </p>
         </div>
       </article>
-      
-      <!-- Comentário -->
+
+      <!-- COMENTARIO 3 -->
       <article class="comment card shadow-sm">
         <div class="card-body d-flex gap-3">
-          <img class="comment-avatar" src="./img/avatar3.png" alt="Foto de Bruno Lima" width="56" height="56">
+          <img class="comment-avatar" src="./img/comentario3.png" alt="Foto de Bruno Lima" width="56" height="56">
 
           <div class="flex-grow-1">
             <header class="d-flex flex-wrap align-items-center gap-2">
-              <h5 class="mb-0 me-2 comment-author">Ana Souza</h5>
+              <h5 class="mb-0 me-2 comment-author">NÚMEO 18</h5>
 
               <span class="ms-auto text-muted small">
                 <time datetime="2025-10-10T18:32:00">out-2025</time>
@@ -313,7 +330,7 @@
         </div>
         <hr>
         <div class="comentario-mensagem">
-          
+
           <p class="comment-message mb-0 mt-2">
             <strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
             been the industry's standard dummy text ever since the 1500s,
@@ -323,11 +340,10 @@
             not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
           </p>
         </div>
-      </article>      
+      </article>
 
     </div>
   </section>
-
 
   <!-- FOOTER -->
   <footer class="footer pt-5 pb-4 text-light">
@@ -412,19 +428,32 @@
     });
   </script>
 
-  <script>
-    const nav = document.querySelector('.botoes-navegacao');
-    const posicaoInicial = nav.offsetTop;
 
-    window.addEventListener('scroll', () => {
-      if (window.scrollY >= posicaoInicial) {
-        nav.classList.add('fixo');
-      } else {
-        nav.classList.remove('fixo');
-      }
-    });
 
-  </script>
+<script>
+  const nav = document.querySelector('.botoes-navegacao');
+  const selecao = document.querySelector('#selecao-produtos');
+  const video = document.querySelector('#bg-video');
+  const posicaoInicial = selecao.offsetTop;
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY >= posicaoInicial) {
+      nav.classList.add('fixo');
+      video.classList.add('escurecido');
+    } else {
+      nav.classList.remove('fixo');
+      video.classList.remove('escurecido');
+    }
+  });
+</script>
+<script>
+  function escurecerVideo() {
+    const video = document.getElementById('bg-video');
+    setTimeout(() => {
+      video.classList.add('escurecido');
+    }, 1000); // 1000 milissegundos = 1 segundo
+  }
+</script>
 </body>
 
 </html>

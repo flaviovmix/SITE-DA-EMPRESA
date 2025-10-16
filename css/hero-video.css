@@ -9,6 +9,20 @@
   color: #fff;
 }
 
+#bg-video {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  transition: filter 0.8s ease; /* 👈 transição suave */
+}
+
+  /* Efeito escuro/desfocado */
+  #bg-video.escurecido {
+    filter: brightness(0.1) blur(6px);
+  }
+
+
+
 /* VÍDEO CENTRALIZADO E COBRINDO TUDO */
 .hero-video video {
   position: fixed;          /* fica fixo no fundo (efeito parallax) */
